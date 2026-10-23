@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="login-card">
+    <h1>Welcome Back</h1>
+    <p>Login Page Deployment Using DevOps</p>
+
+    <form id="loginForm">
+      <label for="email">Email</label>
+      <input id="email" type="email"
+             placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password"
+             placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+      <p id="message" role="status"></p>
+    </form>
+
+    <small>Deployed with Jenkins, Docker and Azure</small>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("message").textContent =
+        "Demo only: connect a secure authentication service to log in.";
+    });
+  </script>
+</body>
+</html>
